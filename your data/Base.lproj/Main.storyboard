@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="your_data" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select your birth data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j5-wk-Trg">
+                                <rect key="frame" x="20" y="64" width="221.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" red="0.10243754845694122" green="0.0070104055247976757" blue="0.11020482512953367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your age in years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-ab-Xh4">
+                                <rect key="frame" x="61" y="561.5" width="292" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="e6H-GR-bgK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" red="0.1024375485" green="0.007010405525" blue="0.1102048251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emg-ei-m0n">
+                                <rect key="frame" x="304" y="447.5" width="90" height="34"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <state key="normal" title="get my age"/>
+                                <connections>
+                                    <action selector="getmyage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ez3-XX-xya"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-ng-rqD">
+                                <rect key="frame" x="20" y="161.5" width="374" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your age in month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alc-fy-Bfx">
+                                <rect key="frame" x="61" y="643" width="292" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="6b3-6C-SVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" red="0.1024375485" green="0.007010405525" blue="0.1102048251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your age days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1p-5x-Mwc">
+                                <rect key="frame" x="61" y="715" width="292" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="baM-5y-jVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" red="0.1024375485" green="0.007010405525" blue="0.1102048251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76163634536085256" green="0.93907255073185181" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LL6-ab-Xh4" secondAttribute="trailing" constant="61" id="2v5-5k-t5Z"/>
+                            <constraint firstItem="t1p-5x-Mwc" firstAttribute="width" secondItem="alc-fy-Bfx" secondAttribute="width" id="A6o-fS-mII"/>
+                            <constraint firstItem="Emg-ei-m0n" firstAttribute="top" secondItem="kqh-ng-rqD" secondAttribute="bottom" constant="70" id="C7d-t7-EzP"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="width" secondItem="LL6-ab-Xh4" secondAttribute="width" id="CTE-Y9-WA8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LL6-ab-Xh4" secondAttribute="bottom" constant="259.5" id="Kue-HQ-obk"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="top" secondItem="LL6-ab-Xh4" secondAttribute="bottom" constant="40.5" id="MbV-J4-pFV"/>
+                            <constraint firstItem="t1p-5x-Mwc" firstAttribute="leading" secondItem="alc-fy-Bfx" secondAttribute="leading" id="OXz-5B-89e"/>
+                            <constraint firstItem="t1p-5x-Mwc" firstAttribute="height" secondItem="alc-fy-Bfx" secondAttribute="height" id="QAW-oc-Vvr"/>
+                            <constraint firstItem="kqh-ng-rqD" firstAttribute="leading" secondItem="5j5-wk-Trg" secondAttribute="leading" id="RH2-aG-s74"/>
+                            <constraint firstItem="5j5-wk-Trg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UQX-yh-AU5"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="leading" secondItem="LL6-ab-Xh4" secondAttribute="leading" id="XAK-ug-rxX"/>
+                            <constraint firstItem="kqh-ng-rqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aMw-vI-moQ"/>
+                            <constraint firstItem="LL6-ab-Xh4" firstAttribute="top" secondItem="Emg-ei-m0n" secondAttribute="bottom" constant="80" id="cqY-Aw-Nrj"/>
+                            <constraint firstItem="LL6-ab-Xh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="eN0-P9-i1w"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="top" secondItem="LL6-ab-Xh4" secondAttribute="bottom" constant="40.5" id="fHl-HC-0Ao"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="trailing" secondItem="LL6-ab-Xh4" secondAttribute="trailing" id="gFm-4P-8xO"/>
+                            <constraint firstItem="alc-fy-Bfx" firstAttribute="height" secondItem="LL6-ab-Xh4" secondAttribute="height" id="hyT-Wz-nfA"/>
+                            <constraint firstItem="t1p-5x-Mwc" firstAttribute="top" secondItem="alc-fy-Bfx" secondAttribute="bottom" constant="31" id="ln8-9n-I8y"/>
+                            <constraint firstItem="kqh-ng-rqD" firstAttribute="top" secondItem="5j5-wk-Trg" secondAttribute="bottom" constant="70" id="nZL-Lr-6BU"/>
+                            <constraint firstItem="t1p-5x-Mwc" firstAttribute="trailing" secondItem="alc-fy-Bfx" secondAttribute="trailing" id="veW-6z-fAZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Emg-ei-m0n" secondAttribute="trailing" constant="20" id="vsq-7r-MOs"/>
+                            <constraint firstItem="5j5-wk-Trg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wpo-VX-LBT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kqh-ng-rqD" secondAttribute="trailing" constant="20" id="xNW-jd-LVM"/>
+                            <constraint firstItem="Emg-ei-m0n" firstAttribute="trailing" secondItem="kqh-ng-rqD" secondAttribute="trailing" id="zjt-Fo-SuD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="datepicker" destination="kqh-ng-rqD" id="FwU-NN-74o"/>
+                        <outlet property="laageindayes" destination="t1p-5x-Mwc" id="aXg-Ob-8GK"/>
+                        <outlet property="laageinmonth" destination="alc-fy-Bfx" id="bNc-Zx-cV5"/>
+                        <outlet property="laageinyears" destination="LL6-ab-Xh4" id="Az8-vv-PQW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="109.82142857142857"/>
         </scene>
     </scenes>
 </document>
